@@ -2,7 +2,7 @@ const telegraf = require('telegraf');
 const fastify = require('fastify')();
 
 const bot = new telegraf(process.env.TELEGRAM_TOKEN);
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 443;
 
 bot.on('text', ({ reply }) => reply('Hello'));
 
