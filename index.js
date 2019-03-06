@@ -6,11 +6,11 @@ const port = process.env.PORT || 5000;
 
 bot.on('text', ({ reply }) => reply('Hello'));
 
-fastify.use(bot.webhookCallback('/secret-path'));
-bot.telegram.setWebhook('https://mysterious-island-36950.herokuapp.com/secret-path');
+//fastify.use(bot.webhookCallback('/secret-path'));
+//bot.telegram.setWebhook('https://mysterious-island-36950.herokuapp.com/secret-path');
 
 fastify.get("/", (req, res) => {
-    res.send("HELLO")
+    res.send({ hello: 'world' })
 });
 
 fastify.listen(port, () => {
