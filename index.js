@@ -9,7 +9,7 @@ const pool = new Pool({
     ssl: true
 });
 
-const bot = new telegraf(process.env.BOT_TOKEN);
+const bot = new telegraf(process.env.TELEGRAM_TOKEN);
 
 bot.telegram.setWebhook('https://mysterious-island-36950.herokuapp.com/secret-path');
 
