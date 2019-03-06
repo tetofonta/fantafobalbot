@@ -11,7 +11,12 @@ const pool = new Pool({
 
 const bot = new telegraf(process.env.TELEGRAM_TOKEN);
 
-bot.on('text', ({ reply }) => reply('Ciaooooooo😄'));
+bot.on('text', ({ reply }) => {
+    if (reply === 'Fottiti')
+        reply('Vaffanculo coglione😒');
+    else
+        reply('Ciaooooooo😄');
+});
 
 bot.telegram.setWebhook('https://mysterious-island-36950.herokuapp.com/secret-path');
 
